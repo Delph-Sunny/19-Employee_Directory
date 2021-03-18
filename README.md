@@ -4,8 +4,8 @@
 :construction:   IN PROGRESS  :construction:  
 ---
 
- <a href="https://img.shields.io/badge/react-vTBD-orange?style=plastic"><img alt="React" src="https://img.shields.io/badge/react-vTBD-orange?style=plastic"/></a>
-<a href="https://img.shields.io/badge/axios-vTBD-blue?style=plastic"><img alt="Axios" src="https://img.shields.io/badge/axios-vTBD-blue?style=plastic"/></a>
+ <a href="https://img.shields.io/badge/react-v17.0.1-orange?style=plastic"><img alt="React" src="https://img.shields.io/badge/react-v17.0.1-orange?style=plastic"/></a>
+<a href="https://img.shields.io/badge/axios-v0.21.1-blue?style=plastic"><img alt="Axios" src="https://img.shields.io/badge/axios-v0.21.1-blue?style=plastic"/></a>
  <a href="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic"><img alt="M.I.T. License use" src="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic"/></a>  
  
  </span>
@@ -41,7 +41,13 @@ he can filter employees by name so it is easier to find a specific employee reco
 ```
 
 :information_source:  
-:construction:  TO DO.  
+:construction: 
+npm dependencies:  
+- axios  
+- bootstrap  
+- gh-pages
+- react  
+- react-dom   
 
 ## Installation and Usage  
 :construction: TO DO  
