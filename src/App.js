@@ -1,20 +1,17 @@
-import React, { Component } from "react";
-//import API from "./utils/API";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
 
-import './App.css';
+import "./App.css";
 
 
 function App() {
   return (
     <>
       <Navbar />
-
+      <Container />
       <Footer />
-
-
-
     </>
   );
 }
