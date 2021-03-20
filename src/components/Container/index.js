@@ -28,6 +28,7 @@ class Container extends Component {
     const value = event.target.value;
     this.setState({ search: value });
     this.filterEmployees(value);
+    // TO DO : Error message when no result - See Activity 20.4
   };
 
   // Filter the list based on the value
@@ -56,7 +57,7 @@ class Container extends Component {
           <Alert type="danger" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}> 
             {this.state.error}
           </Alert>
-          
+
         </div>
       </div>
     );
