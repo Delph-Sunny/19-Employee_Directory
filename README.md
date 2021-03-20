@@ -22,7 +22,7 @@
 
 
 ## Description  
-This application allows you to see quickly the employee directory and filter by name. It uses [Random User API](https://randomuser.me/) to get some random users data such as profile pictures and names. The application uses [React](https://reactjs.org/), [axios](https://www.npmjs.com/package/axios) and [Boothstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/).  
+This application allows you to see quickly the employee directory and filter by name. It uses [Random User API](https://randomuser.me/) to get some random users data such as profile pictures and names. The application uses [React](https://reactjs.org/), [axios](https://www.npmjs.com/package/axios) and [Boothstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/).  
 
 
 ## User Story and Details  
