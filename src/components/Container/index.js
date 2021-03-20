@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Search from "../Search";
 import Table from "../Table";
+import Alert from "../Alert";
 import API from "../../utils/API";
 
 class Container extends Component {
@@ -18,7 +19,9 @@ class Container extends Component {
           employees: res.data.results,
         })
       )
-      .catch((err) => this.setState({ error: err.message }));
+      .catch((err) => {this.setState({ error: err.message });
+      console.log("error: ", this.state.error)  // FOR TESTING
+      });
   }
 
   handleInputChange = (event) => {
@@ -49,6 +52,11 @@ class Container extends Component {
           <div className=" table-responsive-md">
             <Table state={this.state} filterEmployees={this.filterEmployees} />
           </div>
+          {/* //Error message is API call issues */}
+          <Alert type="danger" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}> 
+            {this.state.error}
+          </Alert>
+          
         </div>
       </div>
     );
