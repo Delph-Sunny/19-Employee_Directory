@@ -7,7 +7,6 @@ class Container extends Component {
   state = {
     search: "",
     employees: [],
-    filteredEmployees: [],
     error: "",
   };
 
@@ -17,7 +16,6 @@ class Container extends Component {
       .then((res) =>
         this.setState({
           employees: res.data.results,
-          filteredEmployees: res.data.results,
         })
       )
       .catch((err) => this.setState({ error: err.message }));
@@ -25,37 +23,32 @@ class Container extends Component {
 
   handleInputChange = (event) => {
     const value = event.target.value;
-
     this.setState({ search: value });
-    this.setState({ query: value });
-    // this.filteredEmployees.filter({value})
+    this.filterEmployees(value);
   };
 
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    // API.getfilteredList(this.state.search)
-    //   .then((res) => {
-    //     if (res.data.status === "error") {
-    //       throw new Error(res.data.message);
-    //     }
-    //     this.setState({ results: res.data.message, error: "" });
-    //   })
-    //   .catch((err) => this.setState({ error: err.message }));
+  // Filter the list based on the value
+  filterEmployees = (value) => {
+    this.setState({
+      employees: this.state.employees.filter((employee) => {
+        // Looking for a character or more into the last name and first name
+        return (employee.name.last.toLowerCase().includes(value.toLowerCase().trim()) ||
+        employee.name.first.toLowerCase().includes(value.toLowerCase().trim()));
+      }),
+    });
   };
 
   render() {
     return (
       <div className="container m-3">
-        <Search
-          value={this.state.search}
-          handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
-        />
-        <div className="container m-3">
-          <Table
-            state={this.state}
-            filteredEmployees={this.filteredEmployees}
+        <div className="col-sm-10 offset-1">
+          <Search
+            value={this.state.search}
+            handleInputChange={this.handleInputChange}
           />
+          <div className=" table-responsive-md">
+            <Table state={this.state} filterEmployees={this.filterEmployees} />
+          </div>
         </div>
       </div>
     );

@@ -15,7 +15,7 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
-        {props.state.filteredEmployees.map((employee) => {
+        {props.state.employees.map((employee) => {
           return (
             <tr key={employee.id.value}>
               <td>
