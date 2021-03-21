@@ -8,6 +8,8 @@ class Container extends Component {
   state = {
     search: "",
     employees: [],
+    filteredEmployees: [],
+    sortedName: "",
     error: "",
   };
 
@@ -17,6 +19,7 @@ class Container extends Component {
       .then((res) =>
         this.setState({
           employees: res.data.results,
+          filteredEmployees: res.data.results,
         })
       )
       .catch((err) => {this.setState({ error: err.message });
@@ -34,13 +37,18 @@ class Container extends Component {
   // Filter the list based on the value
   filterEmployees = (value) => {
     this.setState({
-      employees: this.state.employees.filter((employee) => {
+      filteredEmployees: this.state.employees.filter((employee) => {
         // Looking for a character or more into the last name and first name
         return (employee.name.last.toLowerCase().includes(value.toLowerCase().trim()) ||
         employee.name.first.toLowerCase().includes(value.toLowerCase().trim()));
       }),
     });
   };
+
+  // Sort last name
+  sortLast = () => {
+
+  }
 
   render() {
     return (
@@ -51,10 +59,10 @@ class Container extends Component {
             handleInputChange={this.handleInputChange}
           />
           <div className=" table-responsive-md">
-            <Table state={this.state} filterEmployees={this.filterEmployees} />
+            <Table state={this.state} filterEmployees={this.filterEmployees} sortName={this.sortLast} />
           </div>
           {/* //Error message is API call issues */}
-          <Alert type="danger" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}> 
+          <Alert type="warning" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}> 
             {this.state.error}
           </Alert>
 

@@ -4,7 +4,6 @@ form .inner-form {
     margin-bottom: 17px;
 }
 
-button,
 input {
   overflow: visible;
 }
@@ -15,15 +14,13 @@ form .inner-form .input-field {
     position: relative;
 }
 
-form .inner-form .input-field .btn-search {
+.search-icon {
     width: 70px;    
     position: absolute;
     left: 0;
     height: 100%;
-    background: transparent;
     border: 0;
-    padding: 0;
-    cursor: pointer;
+    padding: 0;    
     display: flex;    
     justify-content: center;
     align-items: center;

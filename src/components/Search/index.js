@@ -29,9 +29,9 @@ function Search(props) {
     <form>
       <div className="inner-form">
         <div className="input-field">
-          <button className="btn-search">
+          <div className="search-icon">
             <BsSearch />
-          </button>
+          </div>
           <input
             value={props.search}
             onChange={props.handleInputChange}
@@ -40,7 +40,7 @@ function Search(props) {
             className="form-control text-truncate"
             placeholder="Enter here to find a name"
             id="search"
-          />
+          />         
         </div>
       </div>
     </form>

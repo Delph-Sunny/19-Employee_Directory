@@ -7,15 +7,15 @@ function Table(props) {
       <thead>
         <tr>
           <th scope="col">Picture</th>
-          <th scope="col">First name</th>
-          <th scope="col">Last name</th>
+          <th scope="col">First&#160;name</th>
+          <th scope="col">Last&#160;name</th>
           <th scope="col">Email</th>
-          <th scope="col">Phone Number</th>
+          <th scope="col">Phone&#160;number</th>
           <th scope="col">City</th>
         </tr>
       </thead>
       <tbody>
-        {props.state.employees.map((employee) => {
+        {props.state.filteredEmployees.map((employee) => {
           return (
             <tr key={employee.id.value}>
               <td>
