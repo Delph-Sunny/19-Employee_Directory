@@ -9,9 +9,8 @@ class Container extends Component {
     search: "",
     employees: [],
     filteredEmployees: [],
-    sortDirection: "asc",
+    sortingDirection: "asc",
     error: "",
-    isMobile: false
   };
 
   // When the component mounts, get a list of all available employees
@@ -32,7 +31,9 @@ class Container extends Component {
   handleInputChange = (event) => {
     const value = event.target.value;
     this.setState({ search: value });
-    this.filterEmployees(value);    
+    this.filterEmployees(value);  
+      
+    //this.errorMessage(this.state.filteredEmployees)
   };
 
   // Filter the list based on the value
@@ -44,24 +45,31 @@ class Container extends Component {
           employee.name.last
             .toLowerCase()
             .includes(value.toLowerCase().trim()) ||
-          employee.name.first.toLowerCase().includes(value.toLowerCase().trim())
+          employee.name.first
+          .toLowerCase()
+          .includes(value.toLowerCase().trim())
         );
       }),
     });
-    // Message if no result found
-    if (!this.filteredEmployees) {
-      let err ="Sorry, no results found. Try a different filter criteria";
+    this.errorMessage(this.state.filteredEmployees);  // Checking if result is an empty array
+  };
+
+  // Message if no result found
+  errorMessage = (value) => {
+    console.log("value ", value)  // FOR TESTING
+    if (value.length === 0) {
+      let err = "Sorry, no results found. Try a different filter criteria";      
       this.setState({ error: err });
-    }
+       }
   };
 
   sortName = (key) => {
-    var sortedList;
-    var direction;
+    let sortedList;
+    let direction;
     // Sort by last name or first name
     switch (key) {
       case `last`:
-        if (this.state.sortDirection === "asc") {
+        if (this.state.sortingDirection === "asc") {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.last > b.name.last ? 1 : -1
           );
@@ -71,10 +79,10 @@ class Container extends Component {
             a.name.last < b.name.last ? 1 : -1
           );
           direction = "asc";
-        }        
+        }
         break;
       case `first`:
-        if (this.state.sortDirection === "asc") {
+        if (this.state.sortingDirection === "asc") {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.first > b.name.first ? 1 : -1
           );
@@ -84,14 +92,15 @@ class Container extends Component {
             a.name.first < b.name.first ? 1 : -1
           );
           direction = "asc";
-        }        
+        }
         break;
-        default: // nothing selected by default
+      default:
+        // nothing selected by default
         break;
     }
     this.setState({
       filteredEmployees: sortedList,
-      sortDirection: direction,
+      sortingDirection: direction,
     });
   };
 
@@ -111,7 +120,7 @@ class Container extends Component {
                 sortName={this.sortName}
               />
             </div>
-            {/* //Error message is API call issues */}
+            {/* //Error message if API call issues or empty array */}
             <Alert
               type="warning"
               style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
