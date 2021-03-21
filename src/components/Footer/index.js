@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer className="footer p-3 mb-2 bg-dark text-white">
+    <footer className="center-align flex-column row footer p-3 bg-dark text-white">
       <i>
         &#169; 2021 Copyright 
         <strong> 
