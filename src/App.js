@@ -8,11 +8,11 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="container-fluid">
       <Navbar />
       <Container />
       <Footer />
-    </>
+    </div>
   );
 }
 
