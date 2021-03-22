@@ -31,9 +31,7 @@ class Container extends Component {
   handleInputChange = (event) => {
     const value = event.target.value;
     this.setState({ search: value });
-    this.filterEmployees(value);  
-      
-    //this.errorMessage(this.state.filteredEmployees)
+    this.filterEmployees(value);
   };
 
   // Filter the list based on the value
@@ -45,22 +43,22 @@ class Container extends Component {
           employee.name.last
             .toLowerCase()
             .includes(value.toLowerCase().trim()) ||
-          employee.name.first
-          .toLowerCase()
-          .includes(value.toLowerCase().trim())
+          employee.name.first.toLowerCase().includes(value.toLowerCase().trim())
         );
       }),
     });
-    this.errorMessage(this.state.filteredEmployees);  // Checking if result is an empty array
+    this.errorMessage(this.state.filteredEmployees); // Checking if result is an empty array
   };
 
   // Message if no result found
   errorMessage = (value) => {
-    console.log("value ", value)  // FOR TESTING
+    console.log("value ", value); // FOR TESTING
     if (value.length === 0) {
-      let err = "Sorry, no results found. Try a different filter criteria";      
+      let err = "Sorry, no results found. Try a different filter criteria";
       this.setState({ error: err });
-       }
+    } else {
+      this.setState({ error: "" });
+    }
   };
 
   sortName = (key) => {
