@@ -41,8 +41,7 @@ he can filter employees by name so it is easier to find a specific employee reco
 
 ```
 
-:information_source:  
-:construction: 
+:information_source:   
 npm dependencies:  
 - axios  
 - bootstrap  
@@ -51,11 +50,12 @@ npm dependencies:
 - react-dom   
 
 ## Installation and Usage  
-You can use directly the [deployed app](https://homework-18-budget-tracker-pwa.herokuapp.com/) on Heroku or run it locally with the following steps: 
+You can use directly the [deployed app](https://delph-sunny.github.io/19-employee_directory/) or run it locally with the following steps: 
 - Open a terminal instance  
 - Clone the following [repo](https://github.com/Delph-Sunny/19-employee_directory)  
 - In the working directory, install the dependencies package with the following code line `npm i`  
-- Once the dependencies have been installed, enter `npm start`   
+- Once the dependencies have been installed, enter `npm start`  
+Start filtering or sorting the employee list.   
 
 ## Images of the App :mag:    
 ![Employee_Directory](./images/Snippet_1.PNG)  
