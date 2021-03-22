@@ -1,34 +1,31 @@
 tbody tr:hover {
   background: rgb(203, 230, 248) !important;
   cursor: pointer;
+  font-style: oblique;
 }
 
 thead th span {
   cursor: pointer;
 }
- 
+
 thead {
   background-color: rgb(221, 248, 194);
 }
 
 @media screen and (max-width: 900px) {
   table {
-    font-size: 0.8rem !important;
+    font-size: 0.7rem !important;
   }
-  
 }
 
 @media screen and (max-width: 700px) {
   table {
-    font-size: 0.7rem !important;
+    font-size: 0.6rem !important;
   }
-  
 }
-
 
 @media screen and (max-width: 480px) {
   table {
-      font-size: 0.5rem !important;
-    }
-    
+    font-size: 0.5rem !important;
+  }
 }

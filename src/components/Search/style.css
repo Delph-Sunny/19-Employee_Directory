@@ -1,7 +1,6 @@
-
 form .inner-form {
-    width: 100%;
-    margin-bottom: 17px;
+  width: 100%;
+  margin-bottom: 17px;
 }
 
 input {
@@ -9,30 +8,58 @@ input {
 }
 
 form .inner-form .input-field {
-    height: 70px;
-    width: 100%;
-    position: relative;
+  height: 70px;
+  width: 100%;
+  position: relative;
 }
 
 .search-icon {
-    width: 70px;    
-    position: absolute;
-    left: 0;
-    height: 100%;
-    border: 0;
-    padding: 0;    
-    display: flex;    
-    justify-content: center;
-    align-items: center;
+  width: 70px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form .inner-form .input-field input {
-    height: 100%;    
-    border: 0;
-    background: rgb(203, 230, 248);
-    display: block;
-    width: 100%;
-    padding: 10px 32px 10px 70px;    
-    color: #666;
-    border-radius: 34px;
+  height: 100%;
+  border: 0;
+  background: rgb(203, 230, 248);
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  color: #666;
+  border-radius: 34px;
+}
+
+@media screen and (max-width: 900px) {
+  input {
+    height: 70%;
+    font-size: 0.7rem !important;
+  }
+  form .inner-form .input-field {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  input {
+    font-size: 0.6rem !important;
+  }
+  form .inner-form .input-field {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input {
+    font-size: 0.5rem !important;
+  }
+  form .inner-form .input-field {
+    height: 50%;
+  }
 }

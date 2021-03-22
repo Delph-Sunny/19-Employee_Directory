@@ -4,7 +4,7 @@ import "./style.css";
 
 function Navbar() {
   return (
-    <div className="flex-column row bg-dark text-white mb-5">
+    <div className="flex-column row bg-dark text-white mb-3">
       <div className="col">
         <div className="text-light pt-2">
           <h1 className="display-4"><IoPeopleSharp /> Employee Directory</h1>
