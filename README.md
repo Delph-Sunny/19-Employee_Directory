@@ -61,7 +61,7 @@ You can use directly the [deployed app](https://homework-18-budget-tracker-pwa.h
 ## Images of the App :mag:    
 ![Employee_Directory](./images/Snippet_1.PNG)  
 
-Filtering names with the letter "f"
+Filtering names with the letter "f":  
 ![Employee_Directory](./images/Snippet_2.PNG)     
 
 ## License  
