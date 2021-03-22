@@ -1,7 +1,6 @@
 # 19-Employee_Directory
 <span align="center">   
 
-:construction:   IN PROGRESS  :construction:  
 ---
 
  <a href="https://img.shields.io/badge/react-v17.0.1-orange?style=plastic"><img alt="React" src="https://img.shields.io/badge/react-v17.0.1-orange?style=plastic"/></a>
