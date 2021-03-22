@@ -59,8 +59,10 @@ You can use directly the [deployed app](https://homework-18-budget-tracker-pwa.h
 - Once the dependencies have been installed, enter `npm start`   
 
 ## Images of the App :mag:    
-![Employee_Directory](./public/assets/img/snippet_1.PNG)  
-   
+![Employee_Directory](./images/Snippet_1.PNG)  
+
+Filtering names with the letter "f"
+![Employee_Directory](./images/Snippet_2.PNG)     
 
 ## License  
 
