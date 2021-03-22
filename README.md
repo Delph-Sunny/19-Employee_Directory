@@ -35,8 +35,10 @@ As a user,
 I want to be able to view my entire employee directory at once so that I have quick access to their information.  
 WHEN an employee or manager view the directory,  
 they should only view non-sensitive data about other employees. 
-WHEN a user sees the directory,  
-he can filter employees by name so it is easier to find a specific employee record.   
+WHEN a user see the directory,  
+he can sort employees names by alphabetic order.  
+WHEN a user search the directory,  
+he can filter employees by name so it is easier to find a specific employee record.  
 
 ```
 
@@ -50,7 +52,11 @@ npm dependencies:
 - react-dom   
 
 ## Installation and Usage  
-:construction: TO DO  
+You can use directly the [deployed app](https://homework-18-budget-tracker-pwa.herokuapp.com/) on Heroku or run it locally with the following steps: 
+- Open a terminal instance  
+- Clone the following [repo](https://github.com/Delph-Sunny/19-employee_directory)  
+- In the working directory, install the dependencies package with the following code line `npm i`  
+- Once the dependencies have been installed, enter `npm start`   
 
 ## Images of the App :mag:    
 ![Employee_Directory](./public/assets/img/snippet_1.PNG)  
