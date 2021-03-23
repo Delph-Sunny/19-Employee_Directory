@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASEURL =
-  "https://randomuser.me/api/?results=100&nat=fr&seed=foobar&exc=login,registered";
+  "https://randomuser.me/api/?results=50&nat=fr&seed=foobar&exc=login,registered";
 
  const exportedObject = {
   getEmployeeList: function () {
