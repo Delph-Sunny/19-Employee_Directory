@@ -34,8 +34,8 @@ class Container extends Component {
   };
 
   // Filter the list based on the value
-  filterEmployees = async (value) => {
-    await this.setState({
+  filterEmployees = (value) => {
+    this.setState({
       filteredEmployees: this.state.employees.filter((employee) => {
         // Looking for a character or more into the last name and first name
         return (
