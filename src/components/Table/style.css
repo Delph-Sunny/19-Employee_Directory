@@ -1,7 +1,6 @@
 tbody tr:hover {
-  background: rgb(203, 230, 248) !important;
-  cursor: pointer;
-  font-style: oblique;
+  background: rgb(203, 230, 248) !important;  
+  color: rgb(18, 94, 180);
 }
 
 thead th span {
