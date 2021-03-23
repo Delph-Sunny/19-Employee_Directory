@@ -52,7 +52,6 @@ class Container extends Component {
 
   // Message if no result found
   errorMessage = (value) => {
-    console.log("value ", value); // FOR TESTING
     if (value.length === 0) {
       let err = "Sorry, no results found. Try a different filter criteria.";
       this.setState({ error: err });
