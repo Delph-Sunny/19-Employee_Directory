@@ -24,7 +24,6 @@ class Container extends Component {
       )
       .catch((err) => {
         this.setState({ error: err.message });
-        console.log("error: ", this.state.error); // FOR TESTING
       });
   }
 
