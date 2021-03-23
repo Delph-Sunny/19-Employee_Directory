@@ -28,15 +28,15 @@ class Container extends Component {
       });
   }
 
-  handleInputChange = (event) => {
+  handleInputChange = async (event) => {
     const value = event.target.value;
-    this.setState({ search: value });
+    await this.setState({ search: value });
     this.filterEmployees(value);
   };
 
   // Filter the list based on the value
-  filterEmployees = (value) => {
-    this.setState({
+  filterEmployees = async (value) => {
+    await this.setState({
       filteredEmployees: this.state.employees.filter((employee) => {
         // Looking for a character or more into the last name and first name
         return (
@@ -54,7 +54,7 @@ class Container extends Component {
   errorMessage = (value) => {
     console.log("value ", value); // FOR TESTING
     if (value.length === 0) {
-      let err = "Sorry, no results found. Try a different filter criteria";
+      let err = "Sorry, no results found. Try a different filter criteria.";
       this.setState({ error: err });
     } else {
       this.setState({ error: "" });
